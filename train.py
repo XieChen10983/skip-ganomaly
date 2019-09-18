@@ -1,3 +1,4 @@
+# coding=gbk
 """
 TRAIN SKIP/GANOMALY
 
@@ -21,7 +22,7 @@ def main():
     """ Training
     """
     opt = Options().parse()
-    data = load_data(opt)
+    data = load_data(opt)  # 所得到的data包括train_data和test_data，用data.train_data获取训练数据，data.valid_data获取测试数据。
     model = load_model(opt, data)
     model.train()
 
